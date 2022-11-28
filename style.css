@@ -1,0 +1,41 @@
+.film{
+    margin: 2em;
+    border: 1px solid black;
+    display: block;
+    padding: 1em;
+    width: 10%;
+}
+
+table {
+    margin: 0 auto;
+    border: 1px solid white;
+}
+td {
+    border: 1px solid white;
+
+
+}
+
+.rezervaceVolno {
+    background-color: green;
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+.rezervaceZabrano {
+    background-color: red;
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+.rezervaceVolno:hover {
+    cursor: pointer;
+}
+
+

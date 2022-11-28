@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Page Title</title>
+    <title>Kino</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <h1>REZERVAČNÍ SYSTÉM</h1>
+    <h1>KINO</h1>
 </header>
 
 <nav class="navigace">
 
-        <a href="">
+        <a href="program.php">
             Program
         </a>
-
 
         <a href="">
             Pronájem

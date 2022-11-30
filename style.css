@@ -1,19 +1,137 @@
-.film{
-    margin: 2em;
-    border: 1px solid black;
-    display: block;
-    padding: 1em;
-    width: 10%;
+.programMain {
+    display: flex;
+    justify-content: center;
+
 }
+
+.film {
+    margin: 2em;
+    background-color: #242426;
+    box-shadow: 0px 0px 10px #EF2D56;
+    display: block;
+    float: left;
+    padding: 1em;
+    width: 10em;
+    height: 10em;
+    color: #E0E2DB;
+    border-radius: 0.2em;
+}
+
+.nazevFilmu {
+    font-size: 1.6em;
+}
+
+.zacatekFilmu {
+    font-size: 1.3em;
+}
+
+.koupitLink {
+    text-decoration: none;
+    font-size: 1.2em;
+    background-color: #EF2D56;
+    color: #E0E2DB;
+    font-family: "Segoe UI";
+    padding: 0.2em;
+    margin-top: 0.2em;
+    display: block;
+    border-radius: 0.2em;
+    text-align: center;
+}
+
+.dekujemeMain {
+    display: flex;
+    justify-content: center;
+}
+
+.dekujemeContent {
+    text-align: center;
+    color: #E0E2DB;
+    font-size: 1.1em;
+    font-family: "Segoe UI";
+}
+
+.vratitNaMainBtn {
+    margin-top: 1em;
+    padding: 0.5em;
+    font-family: "Segoe UI";
+    border: none;
+    font-size: 1.2em;
+    border-radius: 1em;
+    background-color: #EF2D56;
+    color: #E0E2DB;
+    transition: 0.2s;
+}
+.nakupContent{
+    display: flex;
+    justify-content: center;
+    font-family: "Segoe UI";
+    color: #E0E2DB;
+    font-size: 1.4em;
+    text-align: center;
+}
+.nakupPolozka{
+    border-bottom: 4px solid #E0E2DB;
+    padding: 0.2em;
+}
+.nakupPolozka > select {
+    background-color: #E0E2DB;
+    color: #242426;
+    border: none;
+    padding: 0.8em;
+    border-radius: 1em;
+
+}
+.nakupPokracovat{
+    padding: 1em;
+    font-family: "Segoe UI";
+    margin: 1em;
+    background-color: #EF2D56;
+    color: #E0E2DB;
+    border: none;
+    border-radius: 1em;
+    font-size: 0.8em;
+}
+.nakupPokracovat:hover {
+    box-shadow: 0px 0px 10px #EF2D56;
+    cursor: pointer;
+}
+.dokonceniCelkovaCena{
+    margin: 1em;
+    color: #EF2D56;
+}
+
+
+.vratitNaMainBtn:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #EF2D56;
+    transition: 0.2s;
+}
+
+.kodVstupenkyCont {
+    font-size: 1.2em;
+}
+
+.kodVstupenky {
+    color: #EF2D56;
+}
+
 
 table {
     margin: 0 auto;
-    border: 1px solid white;
 }
+
+td * {
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+
+}
+
 td {
-    border: 1px solid white;
+}
 
-
+.ulicka {
+    padding-left: 3em;
+    padding-right: 3em;
 }
 
 .rezervaceVolno {
@@ -37,5 +155,86 @@ td {
 .rezervaceVolno:hover {
     cursor: pointer;
 }
+
+.rezervaceNavBtns {
+    background-color: #EF2D56;
+    color: #E0E2DB;
+    padding: 0.6em;
+    text-align: center;
+    border: none;
+    margin: 1em;
+    font-family: "Segoe UI";
+    font-size: 1em;
+    border-radius: 1em;
+    border-top-left-radius: 0;
+    transition: 0.2s;
+}
+.rezervaceNavBtns:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #EF2D56;
+    transition: 0.2s;
+
+}
+
+body {
+    margin: 0;
+    background-color: #363537;
+}
+
+/*
+PALETA
+#363537 cerna
+#EF2D56 cervena
+#E0E2DB seda
+#D2D4C8 druha seda
+#D3EFBD svetle zelena
+*/
+header {
+    margin: 0 auto;
+    text-align: center;
+    background-color: #EF2D56;
+    color: #E0E2DB;
+    font-family: "Segoe UI";
+    padding: 0.1em;
+    border-bottom: 0.3em solid #363537;
+}
+
+.navigace {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.navigace > div {
+
+}
+
+nav > a {
+    margin-left: 1em;
+    margin-right: 1em;
+    font-size: 1.2em;
+    background-color: #EF2D56;
+    font-family: "Segoe UI";
+    padding-left: 4em;
+    padding-right: 4em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    text-decoration: none;
+    color: #E0E2DB;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border-top-right-radius: 1em;
+    transition: 0.2s;
+}
+
+nav > a:hover {
+    background-color: #E0E2DB;
+    color: #EF2D56;
+    transition: 0.2s;
+
+}
+
 
 

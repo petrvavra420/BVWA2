@@ -11,28 +11,32 @@
 </header>
 
 <main>
-<h1>Vybrané sedadla:</h1>
-    <?php
-    if (isset($_GET["listky"])){
-        echo "<form method='post' action='dokonceniObjednavky.php?listky=$_GET[listky]&idFilm=$_GET[idFilm]'>";
-        $array = json_decode($_GET['listky']);
-        foreach ($array as $item){
-            echo $item;
-            $selectName = $item."Select";
-            echo "
+    <div class="nakupContent">
+        <div>
+            <h3>Vybrané sedadla</h3>
+            <?php
+            if (isset($_GET["listky"])) {
+                echo "<form method='post' action='dokonceniObjednavky.php?listky=$_GET[listky]&idFilm=$_GET[idFilm]'>";
+                $array = json_decode($_GET['listky']);
+                foreach ($array as $item) {
+                    echo "<div class='nakupPolozka'>";
+                    echo "Sedadlo č. ".preg_replace('/[^0-9.]+/', '', $item);
+                    $selectName = $item . "Select";
+                    echo "
             <select name='$selectName'>
             <option value='dite'>Dítě do 15 let</option>
             <option value='student'>Student</option>
             <option value='dospely'>Dospělý</option>
             <option value='duchodce'>Důchodce</option>
             </select>";
-            echo "<br>";
-        }
-        echo "<input name='pokracovatObjednavka' value='Pokračovat' type='submit'>";
-        echo "</form>";
-    }
-    ?>
-
+                    echo "</div>";
+                }
+                echo "<input class='nakupPokracovat' name='pokracovatObjednavka' value='Pokračovat' type='submit'>";
+                echo "</form>";
+            }
+            ?>
+        </div>
+    </div>
 </main>
 
 

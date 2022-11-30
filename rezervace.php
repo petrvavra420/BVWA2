@@ -13,23 +13,13 @@
 
 <nav class="navigace">
 
-    <a href="program.php">
-        Program
-    </a>
-
-
-    <a href="">
-        Pronájem
-    </a>
-
-    <a href="">
-        Kontakt
-    </a>
+    <button class="rezervaceNavBtns" onclick="Zpet()">Zpět na program</button>
+    <button class="rezervaceNavBtns" onclick="NakoupitListky(<?php echo $_GET["idFilm"] ?>)">Pokračovat k platbě</button>
 
 </nav>
 
 <main>
-    <button onclick="NakoupitListky(<?php echo $_GET["idFilm"] ?>)">Pokračovat k platbě</button>
+
     <?php
     include_once("dbconnect.php");
     $sql = "SELECT id_rezervace, rezervace_string FROM rezervace WHERE id_rezervace = ".$_GET['idRez'];
@@ -41,21 +31,28 @@
             for ($i = 0; $i < 15;$i++){
                 echo "<tr>";
                 for ($j = 0; $j < 20;$j++){
-
-                    if (substr($rezervaceString,$j + ($i * 20),1) == "1"){
+                    if ($j == 10){
                         echo "<td>";
-                        echo "<span class='rezervaceZabrano'>";
-                        echo ($j + ($i * 20)) + 1;
+                        echo "<span class='ulicka'>";
+                        echo "&nbsp";
                         echo "</span>";
                         echo "</td>";
-                    }else {
-                        $cisloSedadla =( $j + ($i * 20)+1);
-                        echo "<td>";
-                        echo "<a id='sedadlo$cisloSedadla' class='rezervaceVolno' onclick='RezervaceClick(this);'>";
-                        echo ($j + ($i * 20)) + 1;
-                        echo "</a>";
-                        echo "</td>";
                     }
+                        if (substr($rezervaceString, $j + ($i * 20), 1) == "1") {
+                            echo "<td>";
+                            echo "<span class='rezervaceZabrano'>";
+                            echo ($j + ($i * 20)) + 1;
+                            echo "</span>";
+                            echo "</td>";
+                        } else {
+                            $cisloSedadla = ($j + ($i * 20) + 1);
+                            echo "<td>";
+                            echo "<a id='sedadlo$cisloSedadla' class='rezervaceVolno' onclick='RezervaceClick(this);'>";
+                            echo ($j + ($i * 20)) + 1;
+                            echo "</a>";
+                            echo "</td>";
+                        }
+
                 }
                 echo "</tr>";
             }
@@ -81,6 +78,12 @@
             poleVybraneSedadla.push(obj.id);
         }
     }
+
+    function Zpet(){
+        let stringDataUrl = "program.php";
+        window.location = stringDataUrl;
+    }
+
     function NakoupitListky(idFilm) {
         console.log("------------");
         console.log(idFilm);

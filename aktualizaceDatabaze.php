@@ -25,11 +25,12 @@ if (!empty($_POST['koupit'])) {
     $resultId = $conn->query($sqlId);
     if ($resultId->num_rows > 0) {
         while ($rowId = $resultId->fetch_assoc()) {
-            $idVstupenky= $rowId['max(id_vstupenky)'];
+            $idVstupenky= $rowId['max(id_vstupenky)'] + 1;
 
         }
     }
     echo "ID VSTUPENKY: " . $idVstupenky;
+
 
     //projde všechny vybrané sedadla a aktualizuje string
     foreach ($array as $item) {
@@ -66,7 +67,6 @@ for ($i = 0; $i < count($array); $i++) {
     echo " Kód vstupenky: " . $arrayVstupniKody[$i];
     echo "</p>";
 }
-echo "<p>Kódy si prosím uschovejte, budou vyžadovány při vstupu.</p>";
 header('Location: dekujemeNakup.php?poleSedadla=' . $poleSedadla . '&kod=' . $vstupniKod);
 ?>
 

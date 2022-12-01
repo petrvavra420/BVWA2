@@ -8,7 +8,8 @@ header{
     background-color: #06A77D;
     width: 100%;
     text-align: center;
-    padding: 0.1em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
     color: #E0E2DB;
     font-family: "Segoe UI";
     text-transform: uppercase;
@@ -19,7 +20,7 @@ header{
     justify-content: center;
 }
 
-nav > button {
+nav > form > input {
     margin-top: 0.2em;
     padding: 0.6em;
     padding-left: 1em;
@@ -40,7 +41,7 @@ nav > button {
     transition: 0.2s;
     border: none;
 }
-nav > button:hover{
+nav > form > input:hover{
     cursor: pointer;
     transition: 0.2s;
     background-color: #EF2D56;

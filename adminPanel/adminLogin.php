@@ -1,7 +1,7 @@
 <?php
 //přihlášení do sekce správce
-if (isset($_POST['adminSubmit'])){
-    if (!empty($_POST['login']) && !empty($_POST['heslo'])){
+if (isset($_POST['adminSubmit'])) {
+    if (!empty($_POST['login']) && !empty($_POST['heslo'])) {
         //ošetření vstupu
         $login = test_input($_POST['login']);
         $heslo = test_input($_POST['heslo']);
@@ -17,25 +17,25 @@ if (isset($_POST['adminSubmit'])){
             $_SESSION['uzivatel'] = "admin";
             header("Location: admin.php");
             echo "TEST";
-        }else {
+        } else {
             echo '<script>alert("Špatné přihlašovací údaje.")</script>';
         }
 
-    }
-    else {
+    } else {
         //jméno nebo heslo je prázdné
         echo '<script>alert("Jméno nebo heslo je prázdné")</script>';
     }
 }
 
 
-
-function test_input($data) {
+function test_input($data)
+{
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
     return $data;
 }
+
 ?>
 <head>
     <style>
@@ -57,7 +57,7 @@ function test_input($data) {
             height: auto;
             padding: 0.2em;
             text-align: center;
-            background-color: #EF2D56;
+            background-color: #06A77D;
         }
 
         form {
@@ -67,7 +67,7 @@ function test_input($data) {
             text-align: center;
         }
 
-        .loginMenu{
+        .loginMenu {
             margin-top: 1em;
             scale: 1.2;
             padding-top: 2em;
@@ -75,8 +75,9 @@ function test_input($data) {
             display: block;
             background-color: #242426;
         }
-        .submitBtn{
-            background-color: #EF2D56;
+
+        .submitBtn {
+            background-color: #06A77D;
             border: none;
             color: #E0E2DB;
             margin-top: 1em;
@@ -86,15 +87,27 @@ function test_input($data) {
             padding-right: 1em;
             font-family: "Segoe UI";
         }
+
         .submitBtn:hover {
             cursor: pointer;
             background-color: #E0E2DB;
-            color: #EF2D56;
+            color: #06A77D;
         }
+
         h2 {
             text-align: center;
             color: #E0E2DB;
             font-family: "Segoe UI";
+        }
+
+        .inputy {
+            display: block;
+            margin-top: 0.4em;
+
+        }
+
+        .inputy * {
+            padding: 0.4em;
         }
 
 

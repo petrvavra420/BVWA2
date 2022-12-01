@@ -8,7 +8,7 @@ if (isset($_POST['adminSubmit'])){
         $hesloHashed = md5($heslo);
 
         //kontrola údajů v databázi
-        include_once("dbconnect.php");
+        include_once("../dbconnect.php");
         $sql = "SELECT * FROM admin WHERE login = '$login' AND heslo = '$hesloHashed'";
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {

@@ -73,19 +73,6 @@ if (isset($_SESSION['uzivatel'])) {
                         include "novaVstupenka.php";
                         break;
                 }
-
-                if (isset($_POST['programySubmit'])) {
-
-                } else if (isset($_POST['rezervaceSubmit'])) {
-
-                } else if (isset($_POST['vstupenkySubmit'])) {
-
-                } else if (isset($_POST['novyFilmSubmit'])) {
-
-                } else if (isset($_POST['novaVstupenkaSubmit'])) {
-
-                }
-
             } else {
                 header("Location: index.php");
             }

@@ -6,6 +6,8 @@ session_start();
 <head>
     <title>Kinoprogram</title>
     <link rel="stylesheet" href="style.css">
+
+
 </head>
 <body>
 
@@ -44,10 +46,9 @@ $result = $conn->query($sql);
 
 $days = array('Neděle', 'Pondělí', 'Úterý', 'Středa', 'Čtvrtek', 'Pátek', 'Sobota');
 
+//vypíše filmy z databáze
 if ($result->num_rows > 0) {
-    // output data of each row
     while ($row = $result->fetch_assoc()) {
-        //echo "id: " . $row["id_filmu"]. " idrez: " . $row["id_rezervace"]. " " . $row["nazev"]. $row["zacatek"]. $row["konec"]. "<br>";
         $casDny = date("w", strtotime($row["zacatek"]));
         $casHodiny = date("H", strtotime($row["zacatek"]));
         $casMinuty = date("i", strtotime($row["zacatek"]));

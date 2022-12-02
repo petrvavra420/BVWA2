@@ -14,7 +14,8 @@
 <nav class="navigace">
 
     <button class="rezervaceNavBtns" onclick="Zpet()">Zpět na program</button>
-    <button class="rezervaceNavBtns" onclick="NakoupitListky(<?php echo $_GET["idFilm"] ?>)">Pokračovat k platbě</button>
+    <button class="rezervaceNavBtns" onclick="NakoupitListky(<?php echo $_GET["idFilm"] ?>)">Pokračovat k platbě
+    </button>
 
 </nav>
 
@@ -22,36 +23,36 @@
 
     <?php
     include_once("dbconnect.php");
-    $sql = "SELECT id_rezervace, rezervace_string FROM rezervace WHERE id_rezervace = ".$_GET['idRez'];
+    $sql = "SELECT id_rezervace, rezervace_string FROM rezervace WHERE id_rezervace = " . $_GET['idRez'];
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             $rezervaceString = $row['rezervace_string'];
             echo "<table>";
-            for ($i = 0; $i < 15;$i++){
+            for ($i = 0; $i < 15; $i++) {
                 echo "<tr>";
-                for ($j = 0; $j < 20;$j++){
-                    if ($j == 10){
+                for ($j = 0; $j < 20; $j++) {
+                    if ($j == 10) {
                         echo "<td>";
                         echo "<span class='ulicka'>";
                         echo "&nbsp";
                         echo "</span>";
                         echo "</td>";
                     }
-                        if (substr($rezervaceString, $j + ($i * 20), 1) == "1") {
-                            echo "<td>";
-                            echo "<span class='rezervaceZabrano'>";
-                            echo ($j + ($i * 20)) + 1;
-                            echo "</span>";
-                            echo "</td>";
-                        } else {
-                            $cisloSedadla = ($j + ($i * 20) + 1);
-                            echo "<td>";
-                            echo "<a id='sedadlo$cisloSedadla' class='rezervaceVolno' onclick='RezervaceClick(this);'>";
-                            echo ($j + ($i * 20)) + 1;
-                            echo "</a>";
-                            echo "</td>";
-                        }
+                    if (substr($rezervaceString, $j + ($i * 20), 1) == "1") {
+                        echo "<td>";
+                        echo "<span class='rezervaceZabrano'>";
+                        echo ($j + ($i * 20)) + 1;
+                        echo "</span>";
+                        echo "</td>";
+                    } else {
+                        $cisloSedadla = ($j + ($i * 20) + 1);
+                        echo "<td>";
+                        echo "<a id='sedadlo$cisloSedadla' class='rezervaceVolno' onclick='RezervaceClick(this,$_GET[idFilm]);'>";
+                        echo ($j + ($i * 20)) + 1;
+                        echo "</a>";
+                        echo "</td>";
+                    }
 
                 }
                 echo "</tr>";
@@ -66,48 +67,82 @@
 </body>
 <script>
     let poleVybraneSedadla = [];
-    function RezervaceClick(obj) {
+    window.addEventListener("pagehide", priOdchoduZrusRezervace);
+    //tyto dvě proměnné jsou kvůli odchodu uživatele který má vybrané vstupenky
+    //rezervaceClick volá funkci docasneRezervuj která buď zarezervuje nebo zruší rezervaci
+    let idFilmuPriOdchodu;
+    let pokracujeNakup = false;
+
+    function RezervaceClick(obj, idFilm) {
         //pokud je rezervace už zabraná uživatelem
         if (obj.style.backgroundColor == "rgb(196, 175, 24)") {
             obj.style.background = "green";
             const indexVybranaPolozka = poleVybraneSedadla.indexOf(obj.id);
-            poleVybraneSedadla.splice(indexVybranaPolozka,1);
-        }else {
+            docasneRezervuj(idFilm, "odrezervuj");
+            idFilmuPriOdchodu = idFilm;
+            poleVybraneSedadla.splice(indexVybranaPolozka, 1);
+        } else {
             //pokud není, zaber ji
+            idFilmuPriOdchodu = idFilm;
             obj.style.background = "#C4AF18";
             poleVybraneSedadla.push(obj.id);
+            docasneRezervuj(idFilm, "rezervuj");
         }
+
     }
 
-    function Zpet(){
+    function Zpet() {
         let stringDataUrl = "program.php";
         window.location = stringDataUrl;
     }
 
     function NakoupitListky(idFilm) {
+        pokracujeNakup = true;
         console.log("------------");
         console.log(idFilm);
 
-        poleVybraneSedadla.forEach(function(number) {
+        poleVybraneSedadla.forEach(function (number) {
             console.log("POLE: " + number);
         });
         let jsonListky = JSON.stringify(poleVybraneSedadla);
         let stringDataUrl = "nakupListku.php?listky=" + jsonListky;
-        stringDataUrl = stringDataUrl+ "&idFilm=" + idFilm;
+        stringDataUrl = stringDataUrl + "&idFilm=" + idFilm;
         window.location = stringDataUrl;
-        /*
+    }
+
+    //pošle post request na docasnaRezervace.php který zajistí rezervaci/zrušení vybraných míst
+    //(kvůli více uživatelům kteří si budou objednávat naráz)
+    function docasneRezervuj(idFilm, rezervaceTyp) {
+        console.log(idFilm);
+        let jsonListky = JSON.stringify(poleVybraneSedadla);
+
         $.ajax({
-            type : "POST",  //type of method
-            url  : "nakupListku.php",  //your page
-            data : { poleSedadla : jsonListky},// passing the values
-            success: function(res){
-                window.location = stringDataUrl;
-                //do what you want here...
+            type: "POST",
+            url: "docasnaRezervace.php",
+            data: {poleSedadla: jsonListky, idFilm: idFilm, rezervaceTyp: rezervaceTyp},
+            success: function (res) {
             }
         });
-        */
-
     }
+
+    function priOdchoduZrusRezervace() {
+        //pokud uživatel klikne na pokračovat v nákupu, rezervace se nezruší
+        if (!pokracujeNakup) {
+            docasneRezervuj(idFilmuPriOdchodu, "odrezervuj");
+        }
+    }
+
+    /*
+    window.addEventListener("beforeunload", function(event) {
+        console.log("UNLOAD:1");
+        docasneRezervuj(idFilm, "odrezervuj");
+        //event.preventDefault();
+        //event.returnValue = null; //"Any text"; //true; //false;
+        //return null; //"Any text"; //true; //false;
+    });
+
+     */
+
 
 </script>
 </html>

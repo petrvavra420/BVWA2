@@ -1,4 +1,3 @@
-
 <div class="mainContent">
     <form class="novyFilmForm" method="post" action="phpCreate/filmAdd.php">
         <label for="nazevFilmu">Název filmu: </label> <input class="novyFilmInput" id="nazevFilmu" name="nazevFilmu"

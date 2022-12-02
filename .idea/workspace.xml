@@ -1,23 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7730e4a9-3680-486f-b5c1-29b43c38e3d3" name="Changes" comment="com2">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/6a92f3d8-1b88-4ec7-ac64-3c275013603b.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/6a92f3d8-1b88-4ec7-ac64-3c275013603b/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/6a92f3d8-1b88-4ec7-ac64-3c275013603b/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/6a92f3d8-1b88-4ec7-ac64-3c275013603b/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminPanel/novaVstupenka.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminPanel/novyFilm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminPanel/phpCreate/filmAdd.php" afterDir="false" />
+    <list default="true" id="7730e4a9-3680-486f-b5c1-29b43c38e3d3" name="Changes" comment="+Přidávání filmů v admin panelu">
+      <change afterPath="$PROJECT_DIR$/docasnaRezervace.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adminPanel/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminPanel/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminPanel/adminStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/adminPanel/adminStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminPanel/programy.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminPanel/programy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminPanel/novyFilm.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminPanel/novyFilm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nakupListku.php" beforeDir="false" afterPath="$PROJECT_DIR$/nakupListku.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/program.php" beforeDir="false" afterPath="$PROJECT_DIR$/program.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rezervace.php" beforeDir="false" afterPath="$PROJECT_DIR$/rezervace.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +51,11 @@
     ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\BVWA2" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -68,7 +64,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669490032131</updated>
-      <workItem from="1669490035581" duration="37208000" />
+      <workItem from="1669490035581" duration="43583000" />
     </task>
     <task id="LOCAL-00001" summary="com2">
       <created>1669657115134</created>
@@ -77,7 +73,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669657115134</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="+Přidávání filmů v admin panelu">
+      <created>1670019058140</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670019058140</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,6 +99,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="com2" />
-    <option name="LAST_COMMIT_MESSAGE" value="com2" />
+    <MESSAGE value="+Přidávání filmů v admin panelu" />
+    <option name="LAST_COMMIT_MESSAGE" value="+Přidávání filmů v admin panelu" />
   </component>
 </project>

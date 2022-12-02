@@ -20,7 +20,7 @@
                 $array = json_decode($_GET['listky']);
                 foreach ($array as $item) {
                     echo "<div class='nakupPolozka'>";
-                    echo "Sedadlo č. ".preg_replace('/[^0-9.]+/', '', $item);
+                    echo "Sedadlo č. " . preg_replace('/[^0-9.]+/', '', $item);
                     $selectName = $item . "Select";
                     echo "
             <select name='$selectName'>

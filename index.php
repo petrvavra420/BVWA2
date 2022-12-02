@@ -12,24 +12,24 @@
 
 <nav class="navigace">
 
-        <a href="program.php">
-            Program
-        </a>
+    <a href="program.php">
+        Program
+    </a>
 
-        <a href="">
-            Pronájem
-        </a>
 
-        <a href="">
-            Kontakt
-        </a>
-   
+    <a href="">
+        Pronájem
+    </a>
+
+    <a href="">
+        Kontakt
+    </a>
+
 </nav>
 
 <main>
 
 </main>
-<p>This is a paragraph.</p>
 
 </body>
 </html>

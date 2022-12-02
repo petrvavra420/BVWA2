@@ -1,3 +1,24 @@
+<?php
+session_start();
+if (isset($_SESSION['uzivatel'])) {
+    if ($_SESSION['uzivatel'] == "admin") {
+        if (isset($_POST['programySubmit'])) {
+            $_SESSION['currentPage'] = "programy";
+        } else if (isset($_POST['rezervaceSubmit'])) {
+            $_SESSION['currentPage'] = "rezervace";
+        } else if (isset($_POST['vstupenkySubmit'])) {
+            $_SESSION['currentPage'] = "vstupenky";
+        } else if (isset($_POST['novyFilmSubmit'])) {
+            $_SESSION['currentPage'] = "novyFilm";
+        } else if (isset($_POST['novaVstupenkaSubmit'])) {
+            $_SESSION['currentPage'] = "novaVstupenka";
+        }
+
+    } else {
+        header("Location: index.php");
+    }
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,6 +39,8 @@
         <form action="" method="post">
             <input name="programySubmit" value="Programy" type="submit">
             <input name="vstupenkySubmit" value="Vstupenky" type="submit">
+            <input name="novyFilmSubmit" value="Nový film" type="submit">
+            <input name="novaVstupenkaSubmit" value="Nová vstupenka" type="submit">
 
         </form>
         <!--            <button onclick="--><?php //$vybranaTabulka = 1 ?><!--">Programy</button>-->
@@ -26,23 +49,49 @@
     </nav>
 </div>
 
-<main>
-    <?php
-    session_start();
-    if (isset($_SESSION['uzivatel'])) {
-        if ($_SESSION['uzivatel'] == "admin") {
-            if (isset($_POST['programySubmit'])) {
-                include "programy.php";
-            } else if (isset($_POST['rezervaceSubmit'])) {
-                include "rezervace.php";
-            } else if (isset($_POST['vstupenkySubmit'])) {
-                include "vstupenky.php";
+<main class="mainContent">
+    <div class="tableContent">
+        <?php
+
+        if (isset($_SESSION['uzivatel'])) {
+            if ($_SESSION['uzivatel'] == "admin") {
+
+                switch ($_SESSION['currentPage']) {
+                    case "programy":
+                        include "programy.php";
+                        break;
+                    case "rezervace":
+                        include "rezervace.php";
+                        break;
+                    case "vstupenky":
+                        include "vstupenky.php";
+                        break;
+                    case "novyFilm":
+                        include "novyFilm.php";
+                        break;
+                    case "novaVstupenka":
+                        include "novaVstupenka.php";
+                        break;
+                }
+
+                if (isset($_POST['programySubmit'])) {
+
+                } else if (isset($_POST['rezervaceSubmit'])) {
+
+                } else if (isset($_POST['vstupenkySubmit'])) {
+
+                } else if (isset($_POST['novyFilmSubmit'])) {
+
+                } else if (isset($_POST['novaVstupenkaSubmit'])) {
+
+                }
+
+            } else {
+                header("Location: index.php");
             }
-        } else {
-            header("Location: index.php");
         }
-    }
-    ?>
+        ?>
+    </div>
 
 </main>
 

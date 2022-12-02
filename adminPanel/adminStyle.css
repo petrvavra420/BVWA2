@@ -46,3 +46,53 @@ nav > form > input:hover{
     transition: 0.2s;
     background-color: #EF2D56;
 }
+
+main {
+
+}
+.tableContent{
+    display: block;
+    width: 80%;
+}
+.mainContent {
+    display: flex;
+    justify-content: center;
+}
+
+.novyFilmForm {
+    padding: 1em;
+    margin-top: 1em;
+    font-size: 1.4em;
+    border: 5px solid #06A77D;
+    border-radius: 2em;
+}
+
+.novyFilmInput {
+    margin-left: 1em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+
+
+}
+.novyFilmForm > label {
+    display: inline-block;
+    text-align: center;
+    width: 8em;
+}
+.novyFilmSubmit {
+    margin: 0 auto;
+    display: block;
+    margin-top: 1em;
+    background-color: #06A77D;
+    color: #E0E2DB;
+    border: none;
+    border-radius: 0.3em;
+    padding: 0.5em;
+}
+#hledejFilmInput {
+    width: 100%;
+    margin-top: 1em;
+    font-family: "Segoe UI";
+    border: 2px solid #242426;
+    border-radius: 0.2em;
+}

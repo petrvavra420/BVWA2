@@ -1248,7 +1248,7 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="345" parent="337" name="id_filmu">
-      <AutoIncrement>7</AutoIncrement>
+      <AutoIncrement>19</AutoIncrement>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1278,75 +1278,80 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <index id="351" parent="337" name="PRIMARY">
+    <column id="351" parent="337" name="obrazek">
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <index id="352" parent="337" name="PRIMARY">
       <ColNames>id_filmu</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="352" parent="337" name="PRIMARY">
+    <key id="353" parent="337" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="353" parent="338" name="id_rezervace">
-      <AutoIncrement>4</AutoIncrement>
+    <column id="354" parent="338" name="id_rezervace">
+      <AutoIncrement>16</AutoIncrement>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="354" parent="338" name="rezervace_string">
+    <column id="355" parent="338" name="rezervace_string">
       <DataType>text|0s</DataType>
       <DefaultExpression>&apos;000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <index id="355" parent="338" name="PRIMARY">
+    <index id="356" parent="338" name="PRIMARY">
       <ColNames>id_rezervace</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="356" parent="338" name="PRIMARY">
+    <key id="357" parent="338" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="357" parent="339" name="id">
-      <AutoIncrement>34</AutoIncrement>
+    <column id="358" parent="339" name="id">
+      <AutoIncrement>73</AutoIncrement>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="358" parent="339" name="id_vstupenky">
+    <column id="359" parent="339" name="id_vstupenky">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="359" parent="339" name="id_filmu">
+    <column id="360" parent="339" name="id_filmu">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="360" parent="339" name="id_rezervace">
+    <column id="361" parent="339" name="id_rezervace">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="361" parent="339" name="cisloSedadla">
+    <column id="362" parent="339" name="cisloSedadla">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="362" parent="339" name="vstupniKod">
+    <column id="363" parent="339" name="vstupniKod">
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <index id="363" parent="339" name="PRIMARY">
+    <index id="364" parent="339" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="364" parent="339" name="PRIMARY">
+    <key id="365" parent="339" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

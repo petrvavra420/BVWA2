@@ -1,5 +1,6 @@
-<?php
+ <?php
 if (!empty($_POST['koupit'])) {
+
     include_once("dbconnect.php");
     $array = json_decode($_GET['listky']);
 
@@ -31,6 +32,17 @@ if (!empty($_POST['koupit'])) {
     }
     echo "ID VSTUPENKY: " . $idVstupenky;
 
+    //ošetří vstup, pokud někdo změnil adresu na místo které je již zabrané odkáže ho na úvodní stránku
+    foreach ($array as $item){
+        $cisloSedadla = preg_replace('/[^0-9.]+/', '', $item);
+        $sql = "SELECT * FROM vstupenky WHERE id_rezervace = ".$idRezervace." AND cisloSedadla = ".$cisloSedadla."";
+        echo $sql;
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0)  {
+            header("Location: index.php");
+            exit();
+        }
+    }
 
     //projde všechny vybrané sedadla a aktualizuje string
     foreach ($array as $item) {
@@ -50,10 +62,7 @@ if (!empty($_POST['koupit'])) {
     $result = $conn->query($sql);
 
 }
-?>
 
-
-<?php
 $poleSedadla = json_encode($array);
 
 /*foreach ($array as $item){
@@ -67,6 +76,9 @@ for ($i = 0; $i < count($array); $i++) {
     echo " Kód vstupenky: " . $arrayVstupniKody[$i];
     echo "</p>";
 }
+mysqli_close($conn);
+// header("Location: index.php");
+
 header('Location: dekujemeNakup.php?poleSedadla=' . $poleSedadla . '&kod=' . $vstupniKod);
 ?>
 

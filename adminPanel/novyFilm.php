@@ -13,6 +13,7 @@
                                                           type="datetime-local"> <br>
         <label for="konecFilmu">Konec:</label> <input class="novyFilmInput" id="konecFilmu" name="konecFilmu"
                                                       type="datetime-local"> <br>
+         <label for="myfile">Obrázek:</label><input class="novyFilmInputFile" type="file" id="myfile"  name="filmObr"> <br>
         <input class="novyFilmSubmit" name="novyFilm" value="Přidat nový film" type="submit">
     </form>
 </div>

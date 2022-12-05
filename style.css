@@ -1,9 +1,17 @@
+main {
+    /*overflow-y: scroll;*/
+}
 .programMain {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 
 }
-
+.centerContent {
+    display: block;
+    justify-content: center;
+    width: 100%;
+}
 .film {
     margin: 2em;
     background-color: #242426;
@@ -12,9 +20,14 @@
     float: left;
     padding: 1em;
     width: 10em;
-    height: 10em;
+    min-height: 10em;
     color: #E0E2DB;
     border-radius: 0.2em;
+    transition: 0.2s;
+}
+.film:hover {
+    box-shadow: 0px 0px 10px #06A77D;
+    transition: 0.2s;
 }
 
 .nazevFilmu {
@@ -25,17 +38,24 @@
     font-size: 1.3em;
 }
 
+.filmOdkaz {
+    display: block;
+    height: 85%;
+}
+
 .koupitLink {
     text-decoration: none;
     font-size: 1.2em;
     background-color: #EF2D56;
     color: #E0E2DB;
     font-family: "Segoe UI";
+    height: 15%;
     padding: 0.2em;
     margin-top: 0.2em;
     display: block;
     border-radius: 0.2em;
     text-align: center;
+
 }
 
 .dekujemeMain {
@@ -179,6 +199,9 @@ td {
 body {
     margin: 0;
     background-color: #363537;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background 0.5s ease;
 }
 
 /*
@@ -196,7 +219,8 @@ header {
     color: #E0E2DB;
     font-family: "Segoe UI";
     padding: 0.1em;
-    border-bottom: 0.3em solid #363537;
+    margin-bottom: 0.3em;
+    /*border-bottom: 0.3em solid rgba(0,0,0,0);*/
 }
 
 .navigace {
@@ -235,6 +259,50 @@ nav > a:hover {
     transition: 0.2s;
 
 }
+
+.programH1 {
+    text-decoration: none;
+    color: #E0E2DB;
+}
+
+#imgBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+}
+
+@media only screen and (max-width: 600px) {
+    .navigace {
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+    nav > a {
+        width: 100%;
+        margin-top: 0.3em;
+
+    }
+
+    .navigace > div {
+    }
+
+    nav > a:hover {
+        background-color: #E0E2DB;
+        color: #EF2D56;
+        transition: 0.2s;
+
+    }
+    main  {
+        width: 100%;
+        overflow-y: scroll;
+    }
+}
+
+
 
 
 

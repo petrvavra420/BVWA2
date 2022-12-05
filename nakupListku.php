@@ -18,6 +18,9 @@
             if (isset($_GET["listky"])) {
                 echo "<form method='post' action='dokonceniObjednavky.php?listky=$_GET[listky]&idFilm=$_GET[idFilm]'>";
                 $array = json_decode($_GET['listky']);
+                if (count($array) <= 0){
+                    header("Location: index.php ");
+                }
                 foreach ($array as $item) {
                     echo "<div class='nakupPolozka'>";
                     echo "Sedadlo č. " . preg_replace('/[^0-9.]+/', '', $item);
@@ -34,6 +37,7 @@
                 echo "<input class='nakupPokracovat' name='pokracovatObjednavka' value='Pokračovat' type='submit'>";
                 echo "</form>";
             }
+
             ?>
         </div>
     </div>

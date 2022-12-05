@@ -58,7 +58,6 @@
                 echo "</tr>";
             }
             echo "</table>";
-            echo $_GET['idFilm'];
         }
     }
     ?>
@@ -104,10 +103,14 @@
         poleVybraneSedadla.forEach(function (number) {
             console.log("POLE: " + number);
         });
-        let jsonListky = JSON.stringify(poleVybraneSedadla);
-        let stringDataUrl = "nakupListku.php?listky=" + jsonListky;
-        stringDataUrl = stringDataUrl + "&idFilm=" + idFilm;
-        window.location = stringDataUrl;
+        if(poleVybraneSedadla.length > 0) {
+            let jsonListky = JSON.stringify(poleVybraneSedadla);
+            let stringDataUrl = "nakupListku.php?listky=" + jsonListky;
+            stringDataUrl = stringDataUrl + "&idFilm=" + idFilm;
+            window.location = stringDataUrl;
+        } else {
+            alert("Nejsou vybrané žádné místa.");
+        }
     }
 
     //pošle post request na docasnaRezervace.php který zajistí rezervaci/zrušení vybraných míst
@@ -143,7 +146,9 @@
 
      */
 
-
+<?php
+mysqli_close($conn);
+?>
 </script>
 </html>
 

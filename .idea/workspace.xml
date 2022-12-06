@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7730e4a9-3680-486f-b5c1-29b43c38e3d3" name="Changes" comment="+Přidávání filmů v admin panelu">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="7730e4a9-3680-486f-b5c1-29b43c38e3d3" name="Changes" comment="+CSS vylepšení, ošetření nákupu míst">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/6a92f3d8-1b88-4ec7-ac64-3c275013603b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6a92f3d8-1b88-4ec7-ac64-3c275013603b.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminPanel/adminStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/adminPanel/adminStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminPanel/novaVstupenka.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminPanel/novaVstupenka.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adminPanel/novyFilm.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminPanel/novyFilm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aktualizaceDatabaze.php" beforeDir="false" afterPath="$PROJECT_DIR$/aktualizaceDatabaze.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nakupListku.php" beforeDir="false" afterPath="$PROJECT_DIR$/nakupListku.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/program.php" beforeDir="false" afterPath="$PROJECT_DIR$/program.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rezervace.php" beforeDir="false" afterPath="$PROJECT_DIR$/rezervace.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminPanel/phpCreate/filmAdd.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminPanel/phpCreate/filmAdd.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +63,8 @@
       <option name="presentableId" value="Default" />
       <updated>1669490032131</updated>
       <workItem from="1669490035581" duration="43583000" />
-      <workItem from="1670239977491" duration="22815000" />
+      <workItem from="1670239977491" duration="23432000" />
+      <workItem from="1670330157974" duration="3995000" />
     </task>
     <task id="LOCAL-00001" summary="com2">
       <created>1669657115134</created>
@@ -85,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670019058140</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="+CSS vylepšení, ošetření nákupu míst">
+      <created>1670273479593</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1670273479593</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,6 +107,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="com2" />
     <MESSAGE value="+Přidávání filmů v admin panelu" />
-    <option name="LAST_COMMIT_MESSAGE" value="+Přidávání filmů v admin panelu" />
+    <MESSAGE value="+CSS vylepšení, ošetření nákupu míst" />
+    <option name="LAST_COMMIT_MESSAGE" value="+CSS vylepšení, ošetření nákupu míst" />
   </component>
 </project>

@@ -1,5 +1,5 @@
 <div class="mainContent">
-    <form class="novyFilmForm" method="post" action="phpCreate/filmAdd.php">
+    <form class="novyFilmForm" method="post" action="phpCreate/filmAdd.php" enctype="multipart/form-data">
         <label for="nazevFilmu">Název filmu: </label> <input class="novyFilmInput" id="nazevFilmu" name="nazevFilmu"
                                                              type="text"> <br>
         <label for="je3dFilm"> Je v 3D: </label> <span class="novyFilmInput"> Ano <input id="je3dFilm" name="je3dFilm"

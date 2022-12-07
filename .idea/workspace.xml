@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7730e4a9-3680-486f-b5c1-29b43c38e3d3" name="Changes" comment="+ GUI Přidávání vstupenek ADMIN PANEL">
-      <change afterPath="$PROJECT_DIR$/adminPanel/dbconnect.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminPanel/phpCreate/vstupenkaAdd.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/american_psycho.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/dune.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/hobbit.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/hobbit2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/ja2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/ja3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminPanel/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminPanel/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminPanel/adminStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/adminPanel/adminStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminPanel/novaVstupenka.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminPanel/novaVstupenka.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rezervace.php" beforeDir="false" afterPath="$PROJECT_DIR$/rezervace.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DBFILE/bwvasem.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +51,7 @@
       <recent name="C:\xampp\htdocs\BVWA2\adminPanel" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\BVWA2\DBFILE" />
       <recent name="C:\xampp\htdocs\BVWA2" />
     </key>
   </component>
@@ -77,7 +66,7 @@
       <workItem from="1669490035581" duration="43583000" />
       <workItem from="1670239977491" duration="23432000" />
       <workItem from="1670330157974" duration="3995000" />
-      <workItem from="1670429229158" duration="8833000" />
+      <workItem from="1670429229158" duration="9243000" />
     </task>
     <task id="LOCAL-00001" summary="com2">
       <created>1669657115134</created>
@@ -107,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670438074075</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="+ GUI Přidávání vstupenek ADMIN PANEL">
+      <created>1670438386653</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670438386653</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

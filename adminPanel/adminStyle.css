@@ -2,7 +2,8 @@ body {
     background-color: #363537;
     margin: 0;
 }
-header{
+
+header {
     /*background-color:#188FA7;*/
     /*background-color: #F3F7F0;*/
     background-color: #06A77D;
@@ -41,7 +42,8 @@ nav > form > input {
     transition: 0.2s;
     border: none;
 }
-nav > form > input:hover{
+
+nav > form > input:hover {
     cursor: pointer;
     transition: 0.2s;
     background-color: #EF2D56;
@@ -50,10 +52,12 @@ nav > form > input:hover{
 main {
 
 }
-.tableContent{
+
+.tableContent {
     display: block;
     width: 80%;
 }
+
 .mainContent {
     display: flex;
     justify-content: center;
@@ -72,6 +76,7 @@ main {
     margin-top: 0.2em;
     margin-bottom: 0.2em;
 }
+
 .novyFilmInputFile {
     font-size: 1em;
     margin-left: 1em;
@@ -81,11 +86,13 @@ main {
     float: right;
 
 }
+
 .novyFilmForm > label {
     display: inline-block;
     text-align: center;
     width: 8em;
 }
+
 .novyFilmSubmit {
     margin: 0 auto;
     display: block;
@@ -96,10 +103,169 @@ main {
     border-radius: 0.3em;
     padding: 0.5em;
 }
+
 #hledejFilmInput {
     width: 100%;
     margin-top: 1em;
     font-family: "Segoe UI";
     border: 2px solid #242426;
     border-radius: 0.2em;
+}
+
+
+.ulicka {
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+.rezervaceVolno {
+    background-color: green;
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+.rezervaceZabrano {
+    background-color: red;
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+.rezervaceVolno:hover {
+    cursor: pointer;
+}
+
+
+.vstupenkaSedadlo {
+    border-bottom: 3px solid #E0E2DB;
+}
+
+.vstupenkaVytvorenaContent {
+    text-align: center;
+    font-size: 2em;
+    font-family: "Segoe UI";
+    color: #E0E2DB;
+}
+
+.vstupniKod {
+    color: #06A77D;
+}
+
+.vstupenkaZpet {
+    display: block;
+    padding: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border: none;
+    text-decoration: none;
+    color: #E0E2DB;
+    background-color: #06A77D;
+    border-radius: 1em;
+    transition: 0.2s;
+}
+
+.vstupenkaZpet:hover {
+    cursor: pointer;
+    background-color: #E0E2DB;
+    color: #06A77D;
+    transition: 0.2s;
+}
+
+.mainContentVstupenkaNew {
+    display: block;
+}
+
+.mainContentVstupenkaNew * {
+    float: left;
+}
+
+.vstupNavBtns {
+    display: block;
+    text-decoration: none;
+    font-size: 1.4em;
+    color: #E0E2DB;
+    background-color: #06A77D;
+    padding: 0.6em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 1em;
+    border: none;
+    text-align: center;
+    vertical-align: center;
+    font-family: "Segoe UI";
+    font-weight: bold;
+    border-radius: 1em;
+    border-top-left-radius: 0em;
+    transition: 0.2s;
+}
+
+.vstupNavBtns:hover {
+    background-color: #E0E2DB;
+    color: #06A77D;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.vstupenkaNewNav {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.vstupNavSelect {
+    display: block;
+    text-decoration: none;
+    font-size: 1.4em;
+    background-color: #E0E2DB;
+    color: #06A77D;
+    padding: 0.6em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 1em;
+    margin-right: 0em;
+    border: none;
+    text-align: center;
+    vertical-align: center;
+    font-family: "Segoe UI";
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.vstupNavSubmit {
+    display: block;
+    text-decoration: none;
+    font-size: 1.4em;
+    color: #E0E2DB;
+    background-color: #06A77D;
+    color: #E0E2DB;
+    padding: 0.6em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 1em;
+    margin-left: 0em;
+    border: none;
+    text-align: center;
+    vertical-align: center;
+    font-family: "Segoe UI";
+    font-weight: bold;
+    border-radius: 1em;
+    border-top-left-radius: 0em;
+    border-bottom-left-radius: 0em;
+    transition: 0.2s;
+}
+.vstupNavSelect:hover{
+    cursor: pointer;
+}
+.vstupNavSubmit:hover{
+    cursor: pointer;
+    background-color: #E0E2DB;
+    color: #06A77D;
 }

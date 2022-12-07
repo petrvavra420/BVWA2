@@ -124,6 +124,7 @@
             url: "docasnaRezervace.php",
             data: {poleSedadla: jsonListky, idFilm: idFilm, rezervaceTyp: rezervaceTyp},
             success: function (res) {
+
             }
         });
     }

@@ -12,6 +12,8 @@ if (isset($_SESSION['uzivatel'])) {
             $_SESSION['currentPage'] = "novyFilm";
         } else if (isset($_POST['novaVstupenkaSubmit'])) {
             $_SESSION['currentPage'] = "novaVstupenka";
+        }else {
+            $_SESSION['currentPage'] = "programy";
         }
 
     } else {
@@ -70,7 +72,7 @@ if (isset($_SESSION['uzivatel'])) {
                         include "novyFilm.php";
                         break;
                     case "novaVstupenka":
-                        include "novaVstupenka.php";
+                        header("Location: novaVstupenka.php");
                         break;
                 }
             } else {
